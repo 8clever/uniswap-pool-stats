@@ -9,6 +9,7 @@ Get better stats than provide uniswap UI.
 Fee/1K - Fee reward per $1000 investments per day
 
 Deltas Provide best information of what happening with TVL and Volume. Based on 30 Days, 7 Days, Last day
+
 ![Deltas](https://raw.githubusercontent.com/8clever/uniswap-pool-stats/refs/heads/main/docs/deltas.webp)
 
 ## Installation
