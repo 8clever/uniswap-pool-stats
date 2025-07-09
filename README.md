@@ -2,5 +2,5 @@
 
 Get better stats than provide uniswap UI
 
-![Preview]()
+![Preview](https://raw.githubusercontent.com/8clever/uniswap-pool-stats/refs/heads/main/docs/preview.webp)
 
