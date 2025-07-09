@@ -6,7 +6,7 @@ Get better stats than provide uniswap UI.
 - Remove Pools with Hooks
 - Sorted by Fee/1K D7 Fix
 
-Fee/1K - Fee reaward per $1000 investments per day
+Fee/1K - Fee reward per $1000 investments per day
 
 ## Installation
 ```yarn workspaces focus --production```
