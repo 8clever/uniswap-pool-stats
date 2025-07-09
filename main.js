@@ -1,6 +1,7 @@
 import { getPools } from './lib/api/getPools.js'
 import { getPoolInfo } from './lib/api/getPoolInfo.js'
 import { printTable } from 'console-table-printer'
+import { argv } from 'process'
 
 const CHAIN = {
   ARBITRUM: { ID: 42161, NAME: "ARBITRUM" },
@@ -9,7 +10,7 @@ const CHAIN = {
   BNB: { ID: 56, NAME: "BNB" }
 }
 
-const SELECT_NAME = "ARBITRUM"
+const SELECT_NAME = argv[2] || "ARBITRUM"
 
 /**
  * @typedef Info
