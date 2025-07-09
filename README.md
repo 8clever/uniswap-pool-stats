@@ -8,6 +8,10 @@ Get better stats than provide uniswap UI.
 
 Fee/1K - Fee reward per $1000 investments per day
 
+## Preview
+
+![Preview](https://raw.githubusercontent.com/8clever/uniswap-pool-stats/refs/heads/main/docs/preview.webp)
+
 Deltas Provide best information of what happening with TVL and Volume. Based on 30 Days, 7 Days, Last day
 
 ![Deltas](https://raw.githubusercontent.com/8clever/uniswap-pool-stats/refs/heads/main/docs/deltas.webp)
@@ -23,7 +27,3 @@ Deltas Provide best information of what happening with TVL and Volume. Based on 
 - BASE
 - UNICHAIN
 - BSC
-
-## Preview
-![Preview](https://raw.githubusercontent.com/8clever/uniswap-pool-stats/refs/heads/main/docs/preview.webp)
-
