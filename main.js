@@ -7,7 +7,7 @@ const CHAIN = {
   ARBITRUM: { ID: 42161, NAME: "ARBITRUM" },
   UNICHAIN: { ID: 130, NAME: "UNICHAIN" },
   BASE: { ID: 8453, NAME: "BASE" },
-  BNB: { ID: 56, NAME: "BNB" }
+  BSC: { ID: 56, NAME: "BNB" }
 }
 
 const SELECT_NAME = argv[2] || "ARBITRUM"
