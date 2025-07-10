@@ -78,7 +78,7 @@ async function getPoolData (p) {
   const version           = Number(p.protocolVersion.charAt(1))
   const info              = await getPoolInfo(p.id, SELECT.name, version)
   const link              = `https://app.uniswap.org/explore/pools/${p.chain}/${p.id}`.toLowerCase()
-  const liq24H            = info.totalLiquidityPercentChange24h.value
+  const liq24H            = info.totalLiquidityPercentChange24h?.value || 0
   const feeTier           = p.feeTier / 10_000
   const liq               = p.totalLiquidity.value
   const volume30D         = p.volume30Day.value
