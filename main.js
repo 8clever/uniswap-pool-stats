@@ -10,7 +10,7 @@ const CHAIN = {
   BSC: { ID: 56, NAME: "BNB" }
 }
 
-const SELECT_NAME = argv[2] || "ARBITRUM"
+const SELECT_NAME = argv[2]?.toUpperCase() || "ARBITRUM"
 
 /**
  * @typedef Info
