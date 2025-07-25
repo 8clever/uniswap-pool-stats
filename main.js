@@ -45,7 +45,7 @@ const SELECT = {
    * @returns {number}
    */
   sort (a,b) {
-    return a.feePer1KD7Fix - b.feePer1KD7Fix
+    return a.feePer1KLastD - b.feePer1KLastD
   }
 }
 
@@ -69,6 +69,7 @@ function formatChange (value) {
  * @type {object}
  * @property {string} link
  * @property {number} feePer1KD7Fix
+ * @property {number} feePer1KLastD
  * @property {object} table
  * 
  * @param {import('./lib/api/getPools.js').Pool} p 
@@ -99,6 +100,7 @@ async function getPoolData (p) {
   return {
     link,
     feePer1KD7Fix,
+    feePer1KLastD,
     table: {
       "Name": symbol,
       "TVL M.": (liq / million).toFixed(2),
