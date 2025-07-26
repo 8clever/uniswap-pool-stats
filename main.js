@@ -45,7 +45,8 @@ const SELECT = {
    * @returns {number}
    */
   sort (a,b) {
-    return a.feePer1KLastD - b.feePer1KLastD
+    const key = 'feePer1KD7Fix'
+    return a[key] - b[key]
   }
 }
 
