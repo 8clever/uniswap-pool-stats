@@ -20,6 +20,8 @@ const SELECT_NAME = argv[2]?.toUpperCase() || "ARBITRUM"
  * @property {object} table
 */
 
+const symbolsWhitelist = [ "USDT", 'USD₮', "USDC", "DAI" ]
+
 const SELECT = {
   id: CHAIN[SELECT_NAME].ID,
   name: CHAIN[SELECT_NAME].NAME,
@@ -29,6 +31,16 @@ const SELECT = {
    * @returns {boolean} 
    */
   filter (p) {
+    const symbol        = `${p.token0.symbol}/${p.token1.symbol}`
+    let isSymbolAllowed = false
+    for (const s of symbolsWhitelist) {
+      if (symbol.includes(s)) {
+        isSymbolAllowed = true
+        break
+      }
+    }
+    if (!isSymbolAllowed)
+      return false
     if (p.protocolVersion === 'V4' && p.hook.address)
       return false;
     if (p.totalLiquidity.value < 500_000)
