@@ -89,6 +89,7 @@ function formatChange (value) {
  * @returns {Info}
  */
 async function getPoolData (p) {
+  const million           = 1_000_000
   const version           = Number(p.protocolVersion.charAt(1))
   const info              = await getPoolInfo(p.id, SELECT.name, version)
   const link              = `https://app.uniswap.org/explore/pools/${p.chain}/${p.id}`.toLowerCase()
@@ -101,7 +102,6 @@ async function getPoolData (p) {
   const fee30D            = volume30D / 100 * feeTier
   const fee1D             = volume1D / 100 * feeTier
   const volumeDelta       = volume7D / 7 * 30 - volume30D
-  const million           = 1_000_000
   const feePer1KD30       = fee30D / liq * 1000 / 30
   const feePer1KD7        = (volume30D + volumeDelta) / volume30D * feePer1KD30
   const feePer1KDelta     = feePer1KD7 - feePer1KD30
@@ -119,7 +119,7 @@ async function getPoolData (p) {
       "TVL M.": (liq / million).toFixed(2),
       "Liq.24H %":  formatChange(liq24H),
       "Volume M.": (volume30D / million).toFixed(2),
-      "Volume Δ": formatChange(volumeDelta / million),
+      "Volume M. Δ": formatChange(volumeDelta / million),
       "Fee/1K D30": feePer1KD30.toFixed(2),
       "Fee/1K D7": feePer1KD7.toFixed(2),
       "Fee/1K Δ": formatChange(feePer1KDelta),
